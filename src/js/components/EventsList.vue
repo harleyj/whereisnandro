@@ -34,17 +34,12 @@
         </div>
       </v-col>
     </v-row>
-    <!-- <div class="fev-event-result" v-for="event in events.data" :key="event.id" :class="{ 'fev-event-result-preferred': event.cat_courses.length }">
-      <EventCard :event="event" :filters="filters" />
-    </div>
-    <div class="fev-event-spacer flex-grow-1 flex-shrink-0" /> -->
   </div>
 </template>
 <script setup lang="ts">
 
-import { useEventsStore } from "../plugins/store/events";
-import { computed } from "vue";
 import dayjs from "dayjs";
+import { useEventsStore } from "../plugins/store/events";
 import EventRow from "./EventRow.vue";
 
 const events = useEventsStore();

@@ -1,13 +1,8 @@
-import { defineConfig } from "vite";
-import laravel from "laravel-vite-plugin";
 import vue from "@vitejs/plugin-vue";
-import vuetify from "vite-plugin-vuetify";
-import { visualizer } from "rollup-plugin-visualizer";
-import UnheadVite from "@unhead/addons/vite";
+import laravel from "laravel-vite-plugin";
+import { defineConfig } from "vite";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
-import purgecss from '@fullhuman/postcss-purgecss'
-// use purgecss
-const postcssParentSelector = require("./src/js/plugins/postcss-parent-selector.js");
+import vuetify from "vite-plugin-vuetify";
 
 const isProduction = process.env.NODE_ENV === 'production';
 export default defineConfig({
@@ -29,24 +24,6 @@ export default defineConfig({
   ],
   css: {
     devSourcemap: true,
-    postcss: {
-      plugins: isProduction ? [
-        postcssParentSelector({
-          selector: "#nandroplanner",
-          ignoredSelectors: [
-            ':root',
-            /^\.theme--*/,
-            /^\.application--*/,
-            /^\.mdi-*/,
-            /^\.material-icons*/,
-            /^\.material-icons-outlined*/,
-            // Whitelist v-overlay
-            /^\.v-overlay*/,
-          ],
-          replaceRootWithSelector: true
-        })
-      ] : [],
-    }
   },
   build: {
     // minify: 'terser',

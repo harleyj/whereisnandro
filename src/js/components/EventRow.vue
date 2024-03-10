@@ -35,28 +35,6 @@
               <td class="pa-2"><v-icon :icon="startTimeIcon" aria-label="Time of event" /></td>
               <td class="pa-2 px-lg-3"><time :datetime="startTime" v-text="startTime" /> - <time :datetime="endTime" v-text="endTime" /></td>
             </tr>
-            <!-- e.g. Orientation Week -->
-            <!-- <tr v-if="eventType">
-              <td class="pa-2"><v-icon :icon="mdiSitemap" /></td>
-              <td class="pa-2 px-lg-3" v-text="eventType.map((v) => v.name).join(', ')" />
-            </tr> -->
-            <!-- e.g. Indigenous students -->
-            <!-- <tr v-if="eventAudiences">
-              <td class="pa-2"><v-icon :icon="mdiSitemap" /></td>
-              <td class="pa-2 px-lg-3" v-text="eventAudiences.map((v) => v.name).join(', ')" />
-            </tr> -->
-            <!-- <tr v-if="eventCourses && eventCourses.length">
-              <td class="pa-2"><v-icon :icon="mdiSitemap" aria-label="Relevant course" /></td>
-              <td class="pa-2 px-lg-3" v-text="eventCourses.slice(0, 2).join(', ')" />
-            </tr> -->
-            <!-- <tr v-if="eventColleges">
-              <td class="pa-2"><v-icon :icon="mdiSitemap" /></td>
-              <td class="pa-2 px-lg-3" v-text="eventColleges.map((v) => v.name).join(', ')" />
-            </tr>
-            <tr v-if="eventMisc">
-              <td class="pa-2"><v-icon :icon="mdiSitemap" /></td>
-              <td class="pa-2 px-lg-3" v-text="eventMisc.map((v) => v.name).join(', ')" />
-            </tr> -->
             <tr v-if="event.event_location && matchedLocation">
               <td class="pa-2"><v-icon :icon="mdiMapMarker" aria-label="Location of event" /></td>
               <td class="pa-2 px-lg-3">
@@ -78,7 +56,6 @@
             </tr>
           </table>
         </v-sheet>
-        <!-- <div class="text-body-1 mt-3" v-html="event.content" /> -->
       </v-col>
     </v-row>
     <div class="fev-event-footer bg-grey-lighten-3 d-flex justify-end grey-border-top py-3 px-1 py-lg-5 px-lg-3" v-if="shouldShowFooter">
@@ -114,9 +91,6 @@ const mdiClockTimes = [mdiClockTimeOneOutline, mdiClockTimeTwoOutline, mdiClockT
 
 const shouldShowFooter = computed(() => {
   return (event.b1 && event.b1 != "no" && event.b1_link) || (event.b2 && event.b2 != "no" && event.b2_link) || (event.b3 && event.b3 != "no" && event.b3_link);
-});
-const hasFeaturedImage = computed(() => {
-  return event.featuredImage && event.featuredImage.length;
 });
 const { smAndDown } = useDisplay()
 
