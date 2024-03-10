@@ -1,0 +1,119 @@
+@import "variables";
+
+#nandroplanner {
+  font-size: 16px;
+
+  @media (max-width: 964px) {
+    font-size: 15px;
+  }
+  @media (max-width: 764px) {
+    font-size: 14px;
+  }
+}
+.grey-block {
+  width: 200px;
+  height: 12px;
+  background-color: #666;
+  margin: 15px auto;
+}
+.bg-white input[type="text"] {
+  background-color: #fff !important;
+}
+.warning--border {
+  border: 3px solid orange !important;
+}
+.p-relative {
+  position: relative;
+}
+.v-application--wrap {
+  min-height: 0;
+}
+.v-dialog {
+  box-sizing: border-box;
+  max-height: 97vh;
+}
+.v-dialog__content .v-text-field input {
+  background-color: transparent !important;
+}
+.v-list-item .v-list-item__title {
+  font-size: 18px;
+}
+.fill-width {
+  width: 100%;
+}
+.close-button {
+  position: absolute;
+  right: 8px;
+  top: 12px;
+  z-index: 200;
+}
+.grey-border {
+  border: 1px solid #ddd;
+}
+.rounded-md {
+  border-radius: 5px;
+}
+.grey-border-top {
+  border-top: 1px solid #ddd;
+}
+.v-autocomplete__mask {
+  font-weight: bold !important;
+}
+.v-select__content {
+  .v-list {
+    padding: 4px;
+  }
+}
+.fev-filter-label {
+  font-weight: bold;
+  margin: 0 0 0.3em;
+}
+.fev-search-wrapper {
+  .v-field__input {
+    // font-size: 1.5em;
+  }
+  @media (max-width: 964px) {
+    .v-field__input {
+      // font-size: 1.2em;
+    }
+  }
+  @media (max-width: 764px) {
+    .v-field__input {
+      // font-size: 1em;
+    }
+  }
+}
+.fev-select-filter {
+  flex: 1 1 40%;
+  max-width: 40%;
+
+  @media (max-width: 964px) {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+.fev-event-loading {
+  position: relative;
+  height: 4px;
+}
+.fev-event-results-wrapper {
+  z-index: 0;
+  position: relative;
+  // ...
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: space-between;
+  container-name: fevents-wrapper;
+  container-type: inline-size;
+}
+.fev-mobile-select {
+  background-color: #fff;
+  border: 1.5px solid #ddd;
+  width: 100%;
+  height: 40px;
+  appearance: auto;
+  padding: 5px 12px;
+}
+
+@import "events-grid";
+@import "events-list";

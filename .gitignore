@@ -1,0 +1,28 @@
+# Ignore dependencies
+/node_modules
+
+# Ignore build output
+/dist
+
+# Ignore environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore editor and IDE files
+.idea
+.vscode
+*.sublime-*
+*.swp
+
+# Ignore logs and cache files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+wordpress/
+
+hot
+*.code-workspace
+node_modules

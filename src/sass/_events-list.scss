@@ -1,0 +1,43 @@
+
+.fev-event-style-list {
+	.fev-week-text {
+		// color: #333;
+		line-height: 1;
+		font-size: 1.2em;
+		margin-bottom: 4px;
+	}
+	.fev-week-week {
+		font-size: 2em;
+		font-weight: 900;
+		line-height: 1;
+		// color: $ochre;
+	}
+	.fev-week-literal {
+		font-size: 1em;
+		// color: #555;
+		margin-top: .2em;
+	} 
+	.fev-event-info-grid {
+		tr > td:first-child {
+		  width: 42px;
+		  border-right: none;
+		  text-align: center;
+		}
+		tr:not(:last-child) td {
+			// border-bottom: none;
+		//   border-bottom: 1px solid #aaa;
+		//   border: none;
+		}
+	  }
+}
+.fev-event-results-preferred .fev-event-result-row {
+	border-top: 3px solid $green !important;
+
+	@media (min-width: 964px) {
+		border-top-width: 6px !important;
+	}
+	@media (min-width: 1364px) {
+		border-top-width: 0 !important;
+		border-left: 9px solid $green !important;
+	}
+}
